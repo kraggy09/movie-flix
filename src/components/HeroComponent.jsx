@@ -28,13 +28,7 @@ const HeroComponent = () => {
   }, [data]);
 
   return (
-    <div className="relative h-[60vh] pt-[52.35px]  items-center">
-      {!loading && (
-        <div className="absolute opacity-90 h-[50vh] top-0 -z-10">
-          <Img src={bg} />
-        </div>
-      )}
-      <div className="absolute w-full  top-[55vh] lg:top-[65vh] h-16 opacity-60"></div>
+    <div className="relative h-[85vh] pt-[52.35px]  items-center">
       <ContentWrapper>
         <div className="flex bg-white bg-opacity-20 backdrop-blur rounded-b drop-shadow-lg flex-col  items-center justify-center h-[50vh] lg:h-[60vh]">
           <span className="z-10 text-3xl lg:text-5xl text-gray-800">
@@ -45,14 +39,14 @@ const HeroComponent = () => {
           </span>
           <div className="w-full flex items-center justify-center h-16">
             <input
-              className="lg:w-[600px] text-lg lg:text-lg text-gray-400 pl-6 border-none outline-none  w-72 h-10 rounded-l-full bg-slate-200"
+              className="lg:w-[600px] lg:text-lg text-gray-400 pl-6 border-none outline-none  w-44 md:w-72 h-10 rounded-l-full bg-slate-200"
               type="text"
               placeholder="Search for movie or TV show.."
               onChange={(e) => setSearhQuery(e.target.value)}
               onKeyUp={handleSearchQuery}
             />
             <button
-              className="text-xl text-white px-6  bg-red-400 h-10 rounded-r-full"
+              className="md:text-xl text-white md:px-6 px-3  bg-red-400 h-10 rounded-r-full"
               onClick={() => navigate(`search/${searchQuery}`)}
             >
               Search
@@ -60,6 +54,14 @@ const HeroComponent = () => {
           </div>
         </div>
       </ContentWrapper>
+      {!loading && (
+        <div className="absolute opacity-90 h-[50vh] top-0 -z-10">
+          <Img
+            className={"object-cover h-[60vh] lg:h-[70vh] w-[100vw]"}
+            src={bg}
+          />
+        </div>
+      )}
     </div>
   );
 };

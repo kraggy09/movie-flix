@@ -1,21 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
-import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
-  const [show, setShow] = useState("top");
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [query, setQuery] = useState("");
   const [showSearch, setShowSearch] = useState("");
   const navigate = useNavigate();
-  const location = useLocation();
 
   return (
     <>
       <header className="py-3  bg-opacity-20 backdrop-blur rounded drop-shadow-lg flex w-full text-lg justify-between bg-slate-400 ">
-        <div className="ml-12">Logo</div>
+        <div
+          className="ml-12 hover:cursor-pointer"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Logo
+        </div>
         <ul className="flex mr-12 items-center justify-center">
           <li className="px-2">Movies</li>
           <li className="px-2">TV Shows</li>
@@ -31,7 +34,9 @@ const Header = () => {
             onKeyUp={(e) => {
               if (e.key === "Enter" && query.length > 0) {
                 navigate(`/search/${query}`);
-                setShowSearch(false);
+                setTimeout(() => {
+                  setShowSearch(false);
+                }, 1000);
               }
             }}
             placeholder="Search for Movies or TV shows...."
