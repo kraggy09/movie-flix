@@ -5,7 +5,7 @@ const Genre = ({ genre }) => {
   const { genres } = useSelector((store) => store.home);
 
   return (
-    <div className="flex flex-col flex-wrap w-full">
+    <>
       {genre.map((item, index) => {
         if (index < 2) {
           return (
@@ -18,7 +18,7 @@ const Genre = ({ genre }) => {
           );
         }
       })}
-    </div>
+    </>
   );
 };
 

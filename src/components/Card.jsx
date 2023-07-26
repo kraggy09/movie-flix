@@ -20,9 +20,19 @@ const Card = ({ data }) => {
       className="md:h-64 h-44 w-32 md:w-56 rounded-lg mx-6 md:mx-16"
     >
       <div className="relative mb-6">
-        <Img src={res} className="rounded-lg" />
+        {data.poster_path ? (
+          <Img src={res} className="rounded-lg" />
+        ) : (
+          <Img
+            className="rounded-lg h-52 w-auto md:h-80"
+            src={"../../public/NotFound.png"}
+          />
+        )}
         <span className="abolute  top-0">
-          <Rating rating={data?.vote_average?.toFixed(1)} />
+          <Rating
+            className={"absolute -bottom-2  -left-2"}
+            rating={data?.vote_average?.toFixed(1)}
+          />
         </span>
       </div>
       <div className="md:text-lg">

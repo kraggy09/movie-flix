@@ -1,7 +1,7 @@
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const Rating = ({ rating }) => {
+const Rating = ({ rating, className }) => {
   const sty = {
     backgroundColor: "white",
     color: "black",
@@ -11,7 +11,7 @@ const Rating = ({ rating }) => {
     height: 50,
   };
 
-  const styleClass = `absolute -bottom-2  rounded-full -left-2  `;
+  const styleClass = `${className}  rounded-full  `;
   return (
     <div style={sty} className={styleClass}>
       <CircularProgressbar
