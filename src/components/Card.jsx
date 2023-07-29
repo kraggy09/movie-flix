@@ -5,7 +5,7 @@ import Rating from "./Rating";
 import Genre from "./Genre";
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ data }) => {
+const Card = ({ data, similar }) => {
   const { url } = useSelector((store) => store.home);
   const navigate = useNavigate();
   console.log(data);
@@ -15,6 +15,8 @@ const Card = ({ data }) => {
       onClick={() => {
         if (data?.media_type) {
           navigate(`/${data?.media_type}/${data?.id}`);
+        } else {
+          navigate(`/${similar}/${data?.id}`);
         }
       }}
       className="md:h-64 h-44 w-32 md:w-56 rounded-lg mx-6 md:mx-16"

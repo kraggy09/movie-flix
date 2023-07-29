@@ -11,7 +11,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
-
 const App = () => {
   const dispatch = useDispatch();
 

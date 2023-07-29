@@ -1,11 +1,8 @@
-import { useState } from "react";
-import SwitchTabs from "./SwitchTabs";
 import useFetch from "../hooks/useFetch";
 import Carousel from "./Carousel";
 
-const Trending = () => {
-  const [endpoint, setEndPoint] = useState("day");
-  const { data } = useFetch(`/trending/all/${endpoint}`);
+const Similar = ({ mediaType, id }) => {
+  const { data } = useFetch(`/${mediaType}/${id}/similar`);
   console.log(data);
   const css = {
     content_wrapper:
@@ -16,23 +13,20 @@ const Trending = () => {
     <div>
       <div id="content-wrapper" className={css.content_wrapper}>
         <div className={css.text_container} id="text-container">
-          <span className="text-xl md:text-2xl lg:text-3xl md:font-bold font-semibold ml-6">
-            Trending
-          </span>
-          <span>
-            <SwitchTabs
-              setEndPoint={setEndPoint}
-              endpoint={endpoint}
-              data={["Day", "Week"]}
-            />
+          <span className="text-xl md:text-2xl lg:text-3xl md:font-bold font-semibold ">
+            Similar
           </span>
         </div>
       </div>
       <div className="md:h-[500px] h-[450px] my-12 flex items-center justify-center">
-        <Carousel endpoint={data?.media_type} data={data?.results} />
+        <Carousel
+          similar={mediaType}
+          endpoint={data?.media_type}
+          data={data?.results}
+        />
       </div>
     </div>
   );
 };
 
-export default Trending;
+export default Similar;

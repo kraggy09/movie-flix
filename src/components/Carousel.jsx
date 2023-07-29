@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import { useNavigate } from "react-router-dom";
 
-const Carousel = ({ data, endpoint }) => {
+const Carousel = ({ data, endpoint, similar }) => {
   const [originalData, setOriginalData] = useState(null);
   const navigate = useNavigate();
   useEffect(() => {
@@ -24,11 +24,13 @@ const Carousel = ({ data, endpoint }) => {
             onClick={() => {
               if (endpoint != undefined) {
                 navigate(`/${endpoint}/${item.id}`);
+              } else {
+                console.log("No data");
               }
             }}
             key={item.id}
           >
-            <Card data={item} />
+            <Card data={item} similar={similar} />
           </div>
         );
       })}

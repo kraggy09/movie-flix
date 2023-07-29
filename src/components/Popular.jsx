@@ -16,7 +16,9 @@ const Popular = () => {
     <div>
       <div id="content-wrapper" className={css.content_wrapper}>
         <div className={css.text_container} id="text-container">
-          <span className="text-xl font-semibold ml-6">Popular</span>
+          <span className="text-xl md:text-2xl lg:text-3xl md:font-bold font-semibold ml-6">
+            Popular
+          </span>
           <span>
             <SwitchTabs
               setEndPoint={setEndPoint}
