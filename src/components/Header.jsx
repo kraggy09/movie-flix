@@ -20,8 +20,22 @@ const Header = () => {
           Logo
         </div>
         <ul className="flex mr-12 items-center justify-center">
-          <li className="px-2">Movies</li>
-          <li className="px-2">TV Shows</li>
+          <li
+            className="px-2"
+            onClick={() => {
+              navigate(`/explore/movie`);
+            }}
+          >
+            Movies
+          </li>
+          <li
+            className="px-2"
+            onClick={() => {
+              navigate(`/explore/tv`);
+            }}
+          >
+            TV Shows
+          </li>
           <li className="px-2">
             <HiOutlineSearch onClick={() => setShowSearch(true)} />
           </li>

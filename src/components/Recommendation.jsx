@@ -15,7 +15,7 @@ const Recommendation = ({ mediaType, id }) => {
       <div>
         <div id="content-wrapper" className={css.content_wrapper}>
           <div className={css.text_container} id="text-container">
-            <span className="text-xl md:text-2xl lg:text-3xl md:font-bold font-semibold ">
+            <span className="text-xl md:text-2xl lg:mt-16 mt-6 lg:text-3xl md:font-bold font-semibold ">
               Recommendation
             </span>
           </div>

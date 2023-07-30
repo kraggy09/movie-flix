@@ -19,7 +19,7 @@ const Card = ({ data, similar }) => {
           navigate(`/${similar}/${data?.id}`);
         }
       }}
-      className="md:h-64 h-44 w-32 md:w-56 rounded-lg mx-6 md:mx-16"
+      className="md:h-64 hover:cursor-pointer h-44 w-32 md:w-56 rounded-lg mx-6 md:mx-16"
     >
       <div className="relative mb-6">
         {data.poster_path ? (

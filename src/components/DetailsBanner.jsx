@@ -41,16 +41,16 @@ const DetailsBanner = ({ video, crew }) => {
    */
 
   const rowSkeleton = "w-full h-6 my-6 rounded-lg bg-gray-500 animate-pulse";
-  const left = "w-96 h-[400px] rounded-xl bg-gray-500 animate-pulse";
-  const right = "w-[50%] mt-6";
+  const left = "lg:w-96 w-64 h-[400px] rounded-xl bg-gray-500 animate-pulse";
+  const right = "lg:w-[50%] w-full mt-6";
   const detailsContainer = "mt-16  mb-6";
   const detailsBanner =
     "w-full  flex flex-col lg:flex-row lg:items-center lg:justify-between  lg:px-36 px-3";
   const detailsBannerImg =
     "flex lg:mt-8 w-full  items-center lg:justify-between justify-center";
-  const shimmer = "flex justify-around w-full";
+  const shimmer = "flex justify-around px-6 lg:flex-row flex-col w-full";
   const titleContainer = " mx-3   mt-6   ";
-  const detailsInfo = "flex w-full ";
+  const detailsInfo = "flex flex-col md:flex-row w-full ";
 
   //
   //
@@ -85,7 +85,7 @@ const DetailsBanner = ({ video, crew }) => {
               />
             )}
           </div>
-          <div id="right">
+          <div id="right" className="w-[90vw]">
             <div className={detailsInfo}>
               <div className={titleContainer}>
                 <h1 className="lg:text-4xl font-bold text-xl">
