@@ -10,18 +10,18 @@ const Header = () => {
 
   return (
     <>
-      <header className="py-3  bg-opacity-20 backdrop-blur rounded drop-shadow-lg flex w-full text-lg justify-between bg-slate-400 ">
+      <header className="md:py-3 bg-opacity-20 backdrop-blur rounded drop-shadow-lg flex w-full text-lg justify-between bg-slate-400 ">
         <div
-          className="ml-12 hover:cursor-pointer"
+          className="ml-12  text-red-400 hover:text-red-600 font-bold text-2xl hover:cursor-pointer"
           onClick={() => {
             navigate("/");
           }}
         >
-          Logo
+          MOVIEFLIX96
         </div>
         <ul className="flex mr-12 items-center justify-center">
           <li
-            className="px-2"
+            className="px-2 hover:cursor-pointer hover:text-red-400"
             onClick={() => {
               navigate(`/explore/movie`);
             }}
@@ -29,14 +29,14 @@ const Header = () => {
             Movies
           </li>
           <li
-            className="px-2"
+            className="px-2 hover:cursor-pointer hover:text-red-400"
             onClick={() => {
               navigate(`/explore/tv`);
             }}
           >
             TV Shows
           </li>
-          <li className="px-2">
+          <li className="px-2  hover:cursor-pointer hover:text-red-400">
             <HiOutlineSearch onClick={() => setShowSearch(true)} />
           </li>
         </ul>

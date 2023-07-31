@@ -20,7 +20,6 @@ const Explore = () => {
       })
       .catch((err) => console.log(err));
   };
-  console.log(data);
 
   const fetchNextPage = async () => {
     const fetchUrl = `https://api.themoviedb.org/3/discover/${mediaType}?page=${pageNum}&api_key=358eac06ad033f2a7058ebf5138bfec3`;
@@ -36,8 +35,6 @@ const Explore = () => {
       console.log(err);
     }
   };
-
-  console.log(data);
 
   useEffect(() => {
     setPageNum(1);

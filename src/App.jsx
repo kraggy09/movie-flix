@@ -21,13 +21,12 @@ const App = () => {
 
   const fetchApiConfig = async () => {
     const data = await fetchApiData("/configuration");
-    console.log(data);
+
     const url = await {
       backdrop: data.images.secure_base_url + "original",
       poster: data.images.secure_base_url + "original",
       profile: data.images.secure_base_url + "original",
     };
-    console.log(url);
 
     dispatch(getApiConfiguration(url));
   };
@@ -41,11 +40,10 @@ const App = () => {
     });
 
     const data = await Promise.all(promises);
-    console.log(data);
+
     data.map(({ genres }) => {
       return genres.map((item) => (allGenres[item.id] = item));
     });
-    console.log(allGenres);
     dispatch(getGenres(allGenres));
   };
   return (

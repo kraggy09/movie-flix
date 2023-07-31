@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 const Card = ({ data, similar }) => {
   const { url } = useSelector((store) => store.home);
   const navigate = useNavigate();
-  console.log(data);
   const res = url.backdrop + data.poster_path;
   return (
     <div

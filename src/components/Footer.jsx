@@ -11,13 +11,17 @@ const icons = "mx-3 hover:text-red-500 hover:cursor-pointer text-lg";
 const Footer = () => {
   return (
     <footer className="flex  bg-slate-200 bottom-0 w-[100%]">
-      <ContentWrapper>
-        <ul className="flex w-[100%] my-6 px-8 pt-10  justify-around mt-3">
-          <li className="menuItem">Terms Of Use</li>
-          <li className="menuItem">Privacy-Policy</li>
-          <li className="menuItem">About</li>
-          <li className="menuItem">Blog</li>
-          <li className="menuItem">FAQ</li>
+      <div className="mx-3 md:mx-6 lg:mx-16">
+        <ul className="flex w-[100%] my-6 px-8 md:px-16 lg:px-36 pt-10 items-center  justify-around mt-3">
+          <li className="hover:text-red-400 hover:cursor-pointer">
+            Terms Of Use
+          </li>
+          <li className="hover:text-red-400 hover:cursor-pointer">
+            Privacy-Policy
+          </li>
+          <li className="hover:text-red-400 hover:cursor-pointer">About</li>
+          <li className="hover:text-red-400 hover:cursor-pointer">Blog</li>
+          <li className="hover:text-red-400 hover:cursor-pointer">FAQ</li>
         </ul>
         <div className="mx-10">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -41,7 +45,7 @@ const Footer = () => {
             <FaLinkedin />
           </span>
         </div>
-      </ContentWrapper>
+      </div>
     </footer>
   );
 };

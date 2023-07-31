@@ -3,7 +3,6 @@ import Carousel from "./Carousel";
 
 const Similar = ({ mediaType, id }) => {
   const { data } = useFetch(`/${mediaType}/${id}/similar`);
-  console.log(data);
   const css = {
     content_wrapper:
       "w-full max-w-[1200px]  mx-auto py-0 px-[20px] flex items-center justify-betweeen",

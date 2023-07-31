@@ -3,7 +3,6 @@ import Img from "./Img";
 
 const Cast = ({ data, loading }) => {
   const { url } = useSelector((state) => state.home);
-  console.log(data);
   const detailsContainer =
     "w-full flex flex-col lg:flex-row lg:items-center lg:justify-between overflow-x-auto scrollbar-hide lg:px-36  px-3";
   const sectionHeading =

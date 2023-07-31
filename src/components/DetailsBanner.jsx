@@ -18,14 +18,12 @@ const DetailsBanner = ({ video, crew }) => {
     const minutes = totalMinutes % 60;
     return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
   };
-  console.log(crew);
 
   const [show, setShow] = useState(false);
   const [videoId, setVideoId] = useState(null);
   const director = crew?.filter((item) => {
     return item.job == "Director";
   });
-  console.log(director);
 
   const writer = crew?.filter((f) => {
     return f.job === "Screenplay" || f.job === "Story" || f.job === "Writer";

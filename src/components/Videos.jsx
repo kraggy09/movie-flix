@@ -18,7 +18,6 @@ const Videos = ({ data, loading }) => {
           </div>
           <div className="flex hover:cursor-pointer overflow-x-auto flex-row items-start justify-start scrollbar-hide mx-3 lg:mx-36">
             {data?.map((video, index) => {
-              console.log("Hello");
               return (
                 <div
                   key={index}

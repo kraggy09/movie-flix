@@ -8,7 +8,6 @@ const Carousel = ({ data, endpoint, similar }) => {
   const navigate = useNavigate();
   useEffect(() => {
     setOriginalData(data);
-    console.log(originalData);
   }, [data]);
   const [link, setlink] = useState();
 
@@ -25,7 +24,7 @@ const Carousel = ({ data, endpoint, similar }) => {
                 if (endpoint != undefined) {
                   navigate(`/${endpoint}/${item.id}`);
                 } else {
-                  console.log("No data");
+                  console.log("");
                 }
               }}
               key={item.id}

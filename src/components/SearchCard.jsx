@@ -7,7 +7,6 @@ const SearchCard = ({ data, fromSearch, mediaType }) => {
   const res = url.backdrop + data.poster_path;
 
   const navigate = useNavigate();
-  console.log(data);
 
   return (
     <div

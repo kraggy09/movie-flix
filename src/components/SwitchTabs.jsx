@@ -15,7 +15,6 @@ const SwitchTabs = ({ data, endpoint, setEndPoint }) => {
             className={`${tab_css} ${isActive ? active_css : inactive_css}`}
             onClick={() => {
               setEndPoint(item.toLowerCase());
-              console.log(item);
             }}
             key={index}
           >

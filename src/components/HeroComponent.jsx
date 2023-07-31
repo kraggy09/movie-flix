@@ -12,7 +12,6 @@ const HeroComponent = () => {
 
   const { url } = useSelector((store) => store.home);
 
-  console.log(url);
   const handleSearchQuery = (event) => {
     if (event.key === "Enter" && searchQuery.length > 0) {
       navigate(`search/${searchQuery}`);
@@ -23,7 +22,6 @@ const HeroComponent = () => {
     const res =
       url.backdrop +
       data?.results[Math.floor(Math.random() * 20)]?.backdrop_path;
-    console.log(res);
     setBg(res);
   }, [data]);
 

@@ -20,12 +20,10 @@ const SearchResults = () => {
       setLoading(false);
       setData(ans);
       setPageNum((prev) => prev + 1);
-      console.log(ans);
     } catch (err) {
       console.log(err);
     }
   };
-  console.log(data);
 
   const fetchNextPage = async () => {
     try {
@@ -38,12 +36,8 @@ const SearchResults = () => {
       } else {
         setData(ans);
       }
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) {}
   };
-
-  console.log(data);
 
   useEffect(() => {
     setPageNum(1);
@@ -73,7 +67,7 @@ const SearchResults = () => {
               >
                 {data?.results?.map((item, index) => {
                   if (item?.media_type === "peron") {
-                    return;
+                    return null;
                   }
                   return (
                     <SearchCard key={index} data={item} fromSearch={true} />
