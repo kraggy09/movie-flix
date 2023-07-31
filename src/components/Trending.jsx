@@ -6,7 +6,6 @@ import Carousel from "./Carousel";
 const Trending = () => {
   const [endpoint, setEndPoint] = useState("day");
   const { data } = useFetch(`/trending/all/${endpoint}`);
-  console.log(data);
   const css = {
     content_wrapper:
       "w-full max-w-[1200px] my-0 mx-auto py-0 px-[20px] flex items-center justify-betweeen",
