@@ -38,11 +38,7 @@ const Cast = ({ data, loading }) => {
                       <div id="img" className="rounded-full ">
                         <Img
                           className={"lg:h-24 w-[3rem] lg:w-auto rounded-full "}
-                          src={
-                            item?.profile_path
-                              ? imageUrl
-                              : "../../public/NoPP.png"
-                          }
+                          src={item?.profile_path ? imageUrl : "/NoPP.png"}
                         />
                       </div>
                       <div className=" w-[5rem] text-center mx-6 lg:w-auto">

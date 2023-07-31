@@ -26,7 +26,7 @@ const Card = ({ data, similar }) => {
         ) : (
           <Img
             className="rounded-lg h-52 w-auto md:h-80"
-            src={"../../public/NotFound.png"}
+            src={"/NotFound.png"}
           />
         )}
         <span className="abolute  top-0">
