@@ -1,5 +1,6 @@
 import useFetch from "../hooks/useFetch";
 import Carousel from "./Carousel";
+import CardShimmer from "./CardShimmer";
 
 const Similar = ({ mediaType, id }) => {
   const { data } = useFetch(`/${mediaType}/${id}/similar`);
@@ -10,7 +11,7 @@ const Similar = ({ mediaType, id }) => {
   };
   return (
     <>
-      {data?.results?.length > 0 && (
+      {data?.results?.length > 0 ? (
         <div>
           <div id="content-wrapper" className={css.content_wrapper}>
             <div className={css.text_container} id="text-container">
@@ -27,6 +28,8 @@ const Similar = ({ mediaType, id }) => {
             />
           </div>
         </div>
+      ) : (
+        <CardShimmer />
       )}
     </>
   );
