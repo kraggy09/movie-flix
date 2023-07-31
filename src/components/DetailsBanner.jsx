@@ -110,7 +110,9 @@ const DetailsBanner = ({ video, crew }) => {
               <Ratng rating={data?.vote_average.toFixed(1)} />
               <span className="flex items-center hover:text-red-400 ml-8">
                 <AiOutlinePlayCircle size={"3.5rem"} />
-                <span className="text-lg">Watch Trailer</span>
+                <span className="text-lg hover:cursor-pointer">
+                  Watch Trailer
+                </span>
               </span>
             </div>
             <div
