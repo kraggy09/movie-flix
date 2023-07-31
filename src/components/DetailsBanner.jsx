@@ -108,11 +108,9 @@ const DetailsBanner = ({ video, crew }) => {
               className="mt-6 flex w-full items-center  mx-3"
             >
               <Ratng rating={data?.vote_average.toFixed(1)} />
-              <span className="flex items-center hover:text-red-400 ml-8">
+              <span className="flex items-center hover:cursor-pointer hover:text-red-400 ml-8">
                 <AiOutlinePlayCircle size={"3.5rem"} />
-                <span className="text-lg hover:cursor-pointer">
-                  Watch Trailer
-                </span>
+                <span className="text-lg ">Watch Trailer</span>
               </span>
             </div>
             <div
