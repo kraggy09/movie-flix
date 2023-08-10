@@ -12,14 +12,14 @@ const Header = () => {
     <>
       <header className="md:py-3 bg-opacity-20 backdrop-blur rounded drop-shadow-lg flex w-full text-lg justify-between bg-slate-400 ">
         <div
-          className="ml-12  text-red-400 hover:text-red-600 font-bold text-2xl hover:cursor-pointer"
+          className="md:ml-12  text-red-400 hover:text-red-600 font-bold text-2xl hover:cursor-pointer"
           onClick={() => {
             navigate("/");
           }}
         >
           MOVIEFLIX96
         </div>
-        <ul className="flex mr-12 items-center justify-center">
+        <ul className="flex md:mr-12 items-center justify-center">
           <li
             className="px-2 hover:cursor-pointer hover:text-red-400"
             onClick={() => {
